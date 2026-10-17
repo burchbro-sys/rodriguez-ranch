@@ -5914,3 +5914,919 @@ footer a:hover {
   }
 
 }
+/* =========================================================
+   RODRIGUEZ RANCH BUSINESSES PAGE
+========================================================= */
+
+
+/* =========================================================
+   BUSINESS HERO
+========================================================= */
+
+#business-page-hero {
+  min-height: 82vh;
+
+  padding:
+    110px
+    7%
+    60px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 27, 22, .95),
+      rgba(9, 27, 22, .70),
+      rgba(9, 27, 22, .15)
+    ),
+    url("images/products/ranch-market.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.business-page-hero-content {
+  max-width: 900px;
+}
+
+#business-page-hero h1 {
+  margin-bottom: 25px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      4rem,
+      9vw,
+      8.5rem
+    );
+
+  font-weight: 500;
+
+  line-height: .9;
+
+  letter-spacing: -5px;
+}
+
+#business-page-hero h1 span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  font-style: italic;
+}
+
+#business-page-hero p:not(.eyebrow) {
+  max-width: 650px;
+
+  color:
+    rgba(255,255,255,.8);
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+#business-philosophy {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 100px;
+
+  background:
+    var(--cream-light);
+}
+
+#business-philosophy h2 {
+  color:
+    var(--forest-dark);
+}
+
+#business-philosophy > div:last-child
+p:not(.large-copy) {
+  max-width: 700px;
+
+  color:
+    var(--text-light);
+}
+
+
+/* =========================================================
+   BUSINESS DIRECTORY
+========================================================= */
+
+#ventures {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--forest-deep);
+
+  color: white;
+}
+
+.businesses-heading {
+  max-width: 800px;
+
+  margin-bottom: 70px;
+}
+
+.businesses-heading h2 {
+  color: white;
+}
+
+.business-directory {
+  max-width: 1500px;
+
+  margin:
+    0
+    auto;
+}
+
+
+/* =========================================================
+   VENTURE SECTIONS
+========================================================= */
+
+.venture {
+  min-height: 680px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    .9fr;
+
+  background:
+    var(--cream-light);
+
+  color:
+    var(--text);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.venture:nth-child(even) {
+  grid-template-columns:
+    .9fr
+    1.1fr;
+}
+
+.venture-image {
+  min-height: 680px;
+
+  overflow: hidden;
+}
+
+.venture-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .6s ease;
+}
+
+.venture:hover .venture-image img {
+  transform:
+    scale(1.025);
+}
+
+.venture-content {
+  position: relative;
+
+  padding:
+    80px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.venture-number {
+  position: absolute;
+
+  right: 8%;
+
+  top: 35px;
+
+  color:
+    rgba(25,58,48,.08);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 7rem;
+
+  line-height: 1;
+}
+
+.venture-content h3 {
+  margin-bottom: 18px;
+
+  color:
+    var(--forest-dark);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      2.5rem,
+      4vw,
+      4.2rem
+    );
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+}
+
+.venture-lead {
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.35rem;
+
+  line-height: 1.4;
+}
+
+.venture-content >
+p:not(.eyebrow):not(.venture-lead) {
+  max-width: 590px;
+
+  color:
+    var(--text-light);
+}
+
+.venture-tags {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.venture-tags span {
+  padding:
+    7px
+    11px;
+
+  border:
+    1px solid
+    var(--border);
+
+  color:
+    var(--forest);
+
+  font-size: .65rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.venture-link {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding-bottom: 4px;
+
+  color:
+    var(--forest);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--brass);
+}
+
+.future-venture-badge,
+.mission-badge {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding:
+    8px
+    12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+
+  font-size: .62rem;
+
+  font-weight: 800;
+}
+
+.future-venture-badge {
+  background:
+    var(--sage-light);
+
+  color:
+    var(--forest);
+}
+
+.mission-badge {
+  background:
+    var(--forest);
+
+  color:
+    white;
+}
+
+
+/* =========================================================
+   BUSINESS ECOSYSTEM
+========================================================= */
+
+#business-ecosystem {
+  padding:
+    130px
+    7%;
+
+  background:
+    var(--cream);
+}
+
+.ecosystem-heading {
+  max-width: 850px;
+
+  margin-bottom: 65px;
+}
+
+.ecosystem-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.ecosystem-flow {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  border-top:
+    1px solid
+    var(--border);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.ecosystem-flow article {
+  padding:
+    40px
+    27px;
+
+  border-right:
+    1px solid
+    var(--border);
+}
+
+.ecosystem-flow article:last-child {
+  border-right: none;
+}
+
+.ecosystem-flow span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.7rem;
+}
+
+.ecosystem-flow h3 {
+  margin:
+    18px
+    0
+    12px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+}
+
+.ecosystem-flow p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: .83rem;
+}
+
+
+/* =========================================================
+   MARKET FEATURE
+========================================================= */
+
+#market-feature {
+  min-height: 780px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    .85fr;
+
+  background:
+    var(--forest);
+
+  color: white;
+}
+
+.market-feature-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.market-feature-copy {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.market-feature-copy h2 {
+  color: white;
+}
+
+.market-feature-copy .large-copy {
+  color:
+    var(--brass-light);
+}
+
+.market-feature-copy >
+p:not(.eyebrow):not(.large-copy) {
+  color:
+    rgba(255,255,255,.65);
+}
+
+.market-list {
+  margin-top: 30px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.market-list div {
+  padding:
+    14px
+    0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.market-list span {
+  color:
+    var(--brass-light);
+
+  font-size: .7rem;
+
+  font-weight: 800;
+}
+
+.market-list p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   BRAND FAMILY
+========================================================= */
+
+#brand-family {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream-light);
+}
+
+.brand-family-heading {
+  max-width: 850px;
+
+  margin-bottom: 60px;
+}
+
+.brand-family-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.brand-family-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 1px;
+
+  background:
+    var(--border);
+}
+
+.brand-family-grid article {
+  min-height: 260px;
+
+  padding:
+    35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  background:
+    white;
+}
+
+.mini-brand-mark {
+  width: 52px;
+
+  height: 52px;
+
+  margin-bottom: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    var(--brass);
+
+  border-radius: 50%;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-weight: 700;
+}
+
+.brand-family-grid h3 {
+  margin:
+    30px
+    0
+    5px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.35rem;
+}
+
+.brand-family-grid span {
+  color:
+    var(--text-light);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.2px;
+
+  font-size: .62rem;
+}
+
+
+/* =========================================================
+   GROWTH
+========================================================= */
+
+#growth {
+  padding:
+    130px
+    7%;
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 100px;
+
+  background:
+    var(--charcoal);
+
+  color: white;
+}
+
+.growth-copy h2 {
+  color: white;
+}
+
+.growth-copy >
+p:not(.eyebrow) {
+  color:
+    rgba(255,255,255,.62);
+}
+
+.growth-roadmap {
+  border-top:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.growth-roadmap article {
+  padding:
+    18px
+    0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.growth-roadmap span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+}
+
+.growth-roadmap p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+#business-final {
+  padding:
+    110px
+    7%;
+
+  text-align: center;
+
+  background:
+    var(--brass);
+}
+
+#business-final .eyebrow {
+  color:
+    rgba(9,27,22,.62);
+}
+
+#business-final h2 {
+  max-width: 900px;
+
+  margin:
+    0
+    auto
+    35px;
+
+  color:
+    var(--forest-deep);
+}
+
+#business-final h2 span {
+  color:
+    var(--forest);
+}
+
+.business-final-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+.business-final-link {
+  color:
+    var(--forest-deep);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--forest-deep);
+}
+
+
+/* =========================================================
+   BUSINESSES RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  #business-philosophy,
+  #growth,
+  #market-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .venture,
+  .venture:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .venture:nth-child(even)
+  .venture-content {
+    order: 2;
+  }
+
+  .venture:nth-child(even)
+  .venture-image {
+    order: 1;
+  }
+
+  .venture-image {
+    min-height: 550px;
+  }
+
+  .ecosystem-flow {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .brand-family-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .market-feature-image {
+    min-height: 600px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #business-page-hero {
+    min-height: 720px;
+
+    padding:
+      90px
+      7%
+      50px;
+  }
+
+  #business-page-hero h1 {
+    letter-spacing: -3px;
+  }
+
+  #business-philosophy {
+    gap: 30px;
+
+    padding:
+      85px
+      7%;
+  }
+
+  #ventures,
+  #business-ecosystem,
+  #brand-family,
+  #growth {
+    padding:
+      85px
+      7%;
+  }
+
+  .venture {
+    min-height: auto;
+  }
+
+  .venture-image {
+    min-height: 420px;
+  }
+
+  .venture-content {
+    padding:
+      70px
+      7%;
+  }
+
+  .venture-number {
+    font-size: 5rem;
+  }
+
+  .ecosystem-flow,
+  .brand-family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-flow article {
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      var(--border);
+  }
+
+  .market-feature-image {
+    min-height: 450px;
+  }
+
+}
