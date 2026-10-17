@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Concept client portal for RR Veterinary Center at Rodriguez Ranch."
+  >
+
+  <title>Client Portal | RR Veterinary Center</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="portal-page">
+
+
+  <!-- =====================================
+       PORTAL TOP BAR
+  ====================================== -->
+
+  <header class="portal-topbar">
+
+    <a href="veterinary.html" class="portal-brand">
+
+      <div class="brand-mark">
+        RR
+      </div>
+
+      <div>
+
+        <p class="portal-brand-name">
+          RR Veterinary Center
+        </p>
+
+        <p class="portal-brand-sub">
+          Rodriguez Ranch
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <div class="portal-top-actions">
+
+      <span class="demo-badge">
+        Demo Portal
+      </span>
+
+      <button
+        type="button"
+        class="portal-profile-button"
+        id="profile-button"
+      >
+        JR
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================
+       APP LAYOUT
+  ====================================== -->
+
+  <main class="portal-app">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="portal-sidebar">
+
+      <div>
+
+        <p class="sidebar-label">
+          Client Portal
+        </p>
+
+
+        <nav
+          class="portal-navigation"
+          aria-label="Client portal navigation"
+        >
+
+          <button
+            type="button"
+            class="portal-nav-item active"
+            data-view="dashboard"
+          >
+            Dashboard
+          </button>
+
+          <button
+            type="button"
+            class="portal-nav-item"
+            data-view="pets"
+          >
+            My Pets
+          </button>
+
+          <button
+            type="button"
+            class="portal-nav-item"
+            data-view="appointments"
+          >
+            Appointments
+          </button>
+
+          <button
+            type="button"
+            class="portal-nav-item"
+            data-view="records"
+          >
+            Medical Records
+          </button>
+
+          <button
+            type="button"
+            class="portal-nav-item"
+            data-view="medications"
+          >
+            Medications
+          </button>
+
+          <button
+            type="button"
+            class="portal-nav-item"
+            data-view="messages"
+          >
+            Messages
+          </button>
+
+        </nav>
+
+      </div>
+
+
+      <div class="sidebar-bottom">
+
+        <a href="veterinary.html">
+          ← RR Veterinary Center
+        </a>
+
+        <a href="index.html">
+          ← Rodriguez Ranch
+        </a>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         CONTENT AREA
+    ====================================== -->
+
+    <section class="portal-content">
+
+
+      <!-- ===================================
+           DASHBOARD VIEW
+      ==================================== -->
+
+      <div
+        class="portal-view active"
+        id="view-dashboard"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Saturday, October 17
+            </p>
+
+            <h1>
+              Good afternoon,
+              <span>Jordan.</span>
+            </h1>
+
+            <p>
+              Here's what's happening with your animals.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="portal-primary-button"
+            id="request-appointment-button"
+          >
+            + Request Appointment
+          </button>
+
+        </div>
+
+
+
+        <!-- PET SELECTOR -->
+
+        <div class="pet-selector">
+
+          <button
+            type="button"
+            class="pet-selector-card active"
+            data-pet="maverick"
+          >
+
+            <span class="pet-selector-avatar">
+              M
+            </span>
+
+            <span>
+              <strong>Maverick</strong>
+              <small>Canine</small>
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="pet-selector-card"
+            data-pet="luna"
+          >
+
+            <span class="pet-selector-avatar">
+              L
+            </span>
+
+            <span>
+              <strong>Luna</strong>
+              <small>Equine</small>
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="pet-add-card"
+          >
+            <span>+</span>
+            Add Pet
+          </button>
+
+        </div>
+
+
+
+        <!-- SELECTED PET -->
+
+        <section class="selected-pet-card">
+
+          <div class="selected-pet-main">
+
+            <div
+              class="selected-pet-avatar"
+              id="selected-pet-avatar"
+            >
+              M
+            </div>
+
+
+            <div>
+
+              <p class="portal-eyebrow">
+                Selected Patient
+              </p>
+
+              <h2 id="selected-pet-name">
+                Maverick
+              </h2>
+
+              <p
+                class="selected-pet-description"
+                id="selected-pet-description"
+              >
+                Golden Retriever • Male • 4 years old
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="selected-pet-status">
+
+            <span class="status-dot"></span>
+
+            <div>
+              <small>Health Status</small>
+
+              <strong id="selected-pet-status">
+                Doing Well
+              </strong>
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- DASHBOARD STATS -->
+
+        <div class="portal-stat-grid">
+
+
+          <article class="dashboard-stat">
+
+            <p>
+              Next Appointment
+            </p>
+
+            <strong id="next-appointment-date">
+              Nov 14
+            </strong>
+
+            <span id="next-appointment-type">
+              Annual Wellness Exam
+            </span>
+
+            <button
+              type="button"
+              data-open-view="appointments"
+            >
+              View Appointment →
+            </button>
+
+          </article>
+
+
+          <article class="dashboard-stat">
+
+            <p>
+              Vaccination Status
+            </p>
+
+            <strong id="vaccination-status">
+              Current
+            </strong>
+
+            <span id="vaccination-note">
+              No vaccines currently due
+            </span>
+
+            <button
+              type="button"
+              data-open-view="records"
+            >
+              View Records →
+            </button>
+
+          </article>
+
+
+          <article class="dashboard-stat">
+
+            <p>
+              Active Medications
+            </p>
+
+            <strong id="medication-count">
+              1
+            </strong>
+
+            <span id="medication-summary">
+              Simparica Trio
+            </span>
+
+            <button
+              type="button"
+              data-open-view="medications"
+            >
+              View Medications →
+            </button>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- DASHBOARD LOWER AREA -->
+
+        <div class="portal-dashboard-grid">
+
+
+          <!-- UPCOMING -->
+
+          <section class="portal-panel">
+
+            <div class="portal-panel-heading">
+
+              <div>
+                <p class="portal-eyebrow">
+                  Schedule
+                </p>
+
+                <h2>
+                  Upcoming Care
+                </h2>
+              </div>
+
+            </div>
+
+
+            <div
+              class="appointment-preview"
+              id="dashboard-appointment"
+            >
+
+              <div class="appointment-date">
+
+                <strong>
+                  14
+                </strong>
+
+                <span>
+                  NOV
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Annual Wellness Exam
+                </h3>
+
+                <p>
+                  10:30 AM • RR Veterinary Center
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- HEALTH SUMMARY -->
+
+          <section class="portal-panel">
+
+            <div class="portal-panel-heading">
+
+              <div>
+                <p class="portal-eyebrow">
+                  Patient Overview
+                </p>
+
+                <h2>
+                  Health Summary
+                </h2>
+              </div>
+
+            </div>
+
+
+            <div class="health-summary-list">
+
+              <div>
+                <span>Weight</span>
+                <strong id="pet-weight">72 lb</strong>
+              </div>
+
+              <div>
+                <span>Last Exam</span>
+                <strong id="last-exam">Aug 14, 2026</strong>
+              </div>
+
+              <div>
+                <span>Rabies</span>
+                <strong id="rabies-status">Current</strong>
+              </div>
+
+              <div>
+                <span>Microchip</span>
+                <strong id="microchip-status">Registered</strong>
+              </div>
+
+            </div>
+
+          </section>
+
+
+        </div>
+
+
+
+        <!-- RECENT ACTIVITY -->
+
+        <section class="portal-panel recent-activity-panel">
+
+          <div class="portal-panel-heading">
+
+            <div>
+
+              <p class="portal-eyebrow">
+                Health History
+              </p>
+
+              <h2>
+                Recent Activity
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="activity-list"
+            id="activity-list"
+          >
+
+            <article>
+
+              <div class="activity-marker"></div>
+
+              <div>
+
+                <span>
+                  August 14, 2026
+                </span>
+
+                <h3>
+                  Wellness Examination
+                </h3>
+
+                <p>
+                  Routine wellness visit completed.
+                  No significant concerns noted.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article>
+
+              <div class="activity-marker"></div>
+
+              <div>
+
+                <span>
+                  May 2, 2026
+                </span>
+
+                <h3>
+                  Vaccination Visit
+                </h3>
+
+                <p>
+                  Preventive vaccines updated.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- ===================================
+           PETS VIEW
+      ==================================== -->
+
+      <div
+        class="portal-view"
+        id="view-pets"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Patient Profiles
+            </p>
+
+            <h1>
+              My Pets
+            </h1>
+
+            <p>
+              Manage the animals connected to your account.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="full-pet-grid">
+
+
+          <article class="full-pet-card">
+
+            <div class="full-pet-avatar">
+              M
+            </div>
+
+            <p class="portal-eyebrow">
+              Canine
+            </p>
+
+            <h2>
+              Maverick
+            </h2>
+
+            <p>
+              Golden Retriever • Male • 4 years
+            </p>
+
+
+            <div class="pet-detail-list">
+
+              <div>
+                <span>Weight</span>
+                <strong>72 lb</strong>
+              </div>
+
+              <div>
+                <span>Status</span>
+                <strong>Doing Well</strong>
+              </div>
+
+              <div>
+                <span>Last Visit</span>
+                <strong>Aug 14</strong>
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="full-pet-card">
+
+            <div class="full-pet-avatar">
+              L
+            </div>
+
+            <p class="portal-eyebrow">
+              Equine
+            </p>
+
+            <h2>
+              Luna
+            </h2>
+
+            <p>
+              Quarter Horse • Mare • 8 years
+            </p>
+
+
+            <div class="pet-detail-list">
+
+              <div>
+                <span>Weight</span>
+                <strong>1,050 lb</strong>
+              </div>
+
+              <div>
+                <span>Status</span>
+                <strong>Healthy</strong>
+              </div>
+
+              <div>
+                <span>Last Visit</span>
+                <strong>Sep 4</strong>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <button
+            type="button"
+            class="full-add-pet-card"
+          >
+
+            <span>
+              +
+            </span>
+
+            <strong>
+              Add Another Animal
+            </strong>
+
+            <small>
+              Create a new patient profile
+            </small>
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================
+           APPOINTMENTS VIEW
+      ==================================== -->
+
+      <div
+        class="portal-view"
+        id="view-appointments"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Schedule
+            </p>
+
+            <h1>
+              Appointments
+            </h1>
+
+            <p>
+              View upcoming care and appointment history.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="portal-primary-button"
+            id="appointment-page-request"
+          >
+            + Request Appointment
+          </button>
+
+        </div>
+
+
+        <section class="portal-panel">
+
+          <p class="portal-eyebrow">
+            Upcoming
+          </p>
+
+          <h2>
+            Next Appointment
+          </h2>
+
+
+          <div class="appointment-large">
+
+            <div class="appointment-large-date">
+
+              <strong>
+                14
+              </strong>
+
+              <span>
+                NOV
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <p class="appointment-pet">
+                Maverick
+              </p>
+
+              <h3>
+                Annual Wellness Examination
+              </h3>
+
+              <p>
+                Saturday, November 14 • 10:30 AM
+              </p>
+
+              <p>
+                RR Veterinary Center
+              </p>
+
+            </div>
+
+
+            <button type="button">
+              Appointment Details
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <section class="portal-panel appointment-history">
+
+          <p class="portal-eyebrow">
+            Previous Visits
+          </p>
+
+          <h2>
+            Appointment History
+          </h2>
+
+
+          <div class="portal-table">
+
+            <div class="portal-table-row portal-table-header">
+
+              <span>Date</span>
+              <span>Patient</span>
+              <span>Visit</span>
+              <span>Status</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>Aug 14, 2026</span>
+              <span>Maverick</span>
+              <span>Wellness Exam</span>
+              <span class="record-good">Completed</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>May 2, 2026</span>
+              <span>Maverick</span>
+              <span>Vaccinations</span>
+              <span class="record-good">Completed</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>Sep 4, 2026</span>
+              <span>Luna</span>
+              <span>Equine Wellness</span>
+              <span class="record-good">Completed</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- ===================================
+           RECORDS VIEW
+      ==================================== -->
+
+      <div
+        class="portal-view"
+        id="view-records"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Medical History
+            </p>
+
+            <h1>
+              Medical Records
+            </h1>
+
+            <p>
+              Vaccinations, visits, and health history.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <section class="portal-panel">
+
+          <p class="portal-eyebrow">
+            Maverick
+          </p>
+
+          <h2>
+            Vaccination Record
+          </h2>
+
+
+          <div class="portal-table">
+
+            <div class="portal-table-row portal-table-header">
+
+              <span>Vaccine</span>
+              <span>Last Given</span>
+              <span>Next Due</span>
+              <span>Status</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>Rabies</span>
+              <span>May 2, 2026</span>
+              <span>May 2, 2029</span>
+              <span class="record-good">Current</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>DHPP</span>
+              <span>May 2, 2026</span>
+              <span>May 2, 2027</span>
+              <span class="record-good">Current</span>
+
+            </div>
+
+
+            <div class="portal-table-row">
+
+              <span>Bordetella</span>
+              <span>May 2, 2026</span>
+              <span>May 2, 2027</span>
+              <span class="record-good">Current</span>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- ===================================
+           MEDICATIONS
+      ==================================== -->
+
+      <div
+        class="portal-view"
+        id="view-medications"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Prescriptions
+            </p>
+
+            <h1>
+              Medications
+            </h1>
+
+            <p>
+              Review current and previous medications.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <section class="medication-card">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Active
+            </p>
+
+            <h2>
+              Simparica Trio
+            </h2>
+
+            <p>
+              Maverick
+            </p>
+
+          </div>
+
+
+          <div class="medication-details">
+
+            <div>
+              <span>Instructions</span>
+              <strong>1 tablet monthly</strong>
+            </div>
+
+            <div>
+              <span>Next Dose</span>
+              <strong>November 1</strong>
+            </div>
+
+            <div>
+              <span>Refills</span>
+              <strong>4 remaining</strong>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- ===================================
+           MESSAGES
+      ==================================== -->
+
+      <div
+        class="portal-view"
+        id="view-messages"
+      >
+
+        <div class="portal-page-heading">
+
+          <div>
+
+            <p class="portal-eyebrow">
+              Communication
+            </p>
+
+            <h1>
+              Messages
+            </h1>
+
+            <p>
+              Future secure communication with RR Veterinary Center.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="portal-primary-button"
+          >
+            + New Message
+          </button>
+
+        </div>
+
+
+        <section class="message-layout">
+
+          <div class="message-list">
+
+            <button
+              type="button"
+              class="message-preview active"
+            >
+
+              <strong>
+                RR Veterinary Center
+              </strong>
+
+              <span>
+                Appointment Confirmation
+              </span>
+
+              <small>
+                Oct 15
+              </small>
+
+            </button>
+
+
+            <button
+              type="button"
+              class="message-preview"
+            >
+
+              <strong>
+                RR Veterinary Center
+              </strong>
+
+              <span>
+                Maverick's Wellness Results
+              </span>
+
+              <small>
+                Aug 15
+              </small>
+
+            </button>
+
+          </div>
+
+
+          <div class="message-content">
+
+            <p class="portal-eyebrow">
+              October 15, 2026
+            </p>
+
+            <h2>
+              Appointment Confirmation
+            </h2>
+
+            <p>
+              Maverick's annual wellness examination
+              is scheduled for November 14 at 10:30 AM.
+            </p>
+
+            <p>
+              Please contact RR Veterinary Center if
+              you need to change or cancel the appointment.
+            </p>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================
+       APPOINTMENT MODAL
+  ====================================== -->
+
+  <div
+    class="portal-modal"
+    id="appointment-modal"
+    aria-hidden="true"
+  >
+
+    <div class="portal-modal-card">
+
+      <button
+        type="button"
+        class="portal-modal-close"
+        id="modal-close"
+        aria-label="Close appointment form"
+      >
+        ×
+      </button>
+
+
+      <p class="portal-eyebrow">
+        RR Veterinary Center
+      </p>
+
+      <h2>
+        Request an Appointment
+      </h2>
+
+      <p>
+        This is a concept form. No appointment
+        will actually be submitted.
+      </p>
+
+
+      <form id="appointment-form">
+
+        <label for="appointment-pet">
+          Patient
+        </label>
+
+        <select id="appointment-pet">
+
+          <option>Maverick</option>
+
+          <option>Luna</option>
+
+        </select>
+
+
+        <label for="appointment-reason">
+          Reason for Visit
+        </label>
+
+        <select id="appointment-reason">
+
+          <option>Annual Wellness</option>
+
+          <option>Vaccination</option>
+
+          <option>Sick Visit</option>
+
+          <option>Follow-Up</option>
+
+          <option>Other</option>
+
+        </select>
+
+
+        <label for="appointment-date">
+          Preferred Date
+        </label>
+
+        <input
+          type="date"
+          id="appointment-date"
+        >
+
+
+        <label for="appointment-notes">
+          Notes
+        </label>
+
+        <textarea
+          id="appointment-notes"
+          rows="4"
+          placeholder="Tell us anything the veterinary team should know."
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="portal-primary-button"
+        >
+          Submit Demo Request
+        </button>
+
+      </form>
+
+
+      <p
+        class="appointment-success"
+        id="appointment-success"
+      ></p>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
