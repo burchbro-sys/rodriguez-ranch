@@ -684,3 +684,431 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
 });
+/* =========================================================
+   RR VETERINARY CLIENT PORTAL
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (!document.body.classList.contains("portal-page")) {
+    return;
+  }
+
+
+  /* =======================================================
+     DEMO PATIENT DATA
+  ======================================================= */
+
+  const pets = {
+
+    maverick: {
+      initial: "M",
+      name: "Maverick",
+      description:
+        "Golden Retriever • Male • 4 years old",
+      status: "Doing Well",
+      appointmentDate: "Nov 14",
+      appointmentType: "Annual Wellness Exam",
+      vaccinationStatus: "Current",
+      vaccinationNote: "No vaccines currently due",
+      medicationCount: "1",
+      medicationSummary: "Simparica Trio",
+      weight: "72 lb",
+      lastExam: "Aug 14, 2026",
+      rabies: "Current",
+      microchip: "Registered"
+    },
+
+    luna: {
+      initial: "L",
+      name: "Luna",
+      description:
+        "Quarter Horse • Mare • 8 years old",
+      status: "Healthy",
+      appointmentDate: "Dec 6",
+      appointmentType: "Equine Wellness Visit",
+      vaccinationStatus: "Current",
+      vaccinationNote: "Routine vaccines current",
+      medicationCount: "0",
+      medicationSummary: "No active medications",
+      weight: "1,050 lb",
+      lastExam: "Sep 4, 2026",
+      rabies: "Current",
+      microchip: "Registered"
+    }
+
+  };
+
+
+  /* =======================================================
+     PORTAL NAVIGATION
+  ======================================================= */
+
+  const navigationButtons =
+    document.querySelectorAll(
+      ".portal-nav-item"
+    );
+
+  const portalViews =
+    document.querySelectorAll(
+      ".portal-view"
+    );
+
+
+  function openPortalView(viewName) {
+
+    portalViews.forEach((view) => {
+
+      view.classList.remove("active");
+
+    });
+
+
+    navigationButtons.forEach((button) => {
+
+      button.classList.remove("active");
+
+      if (
+        button.dataset.view === viewName
+      ) {
+        button.classList.add("active");
+      }
+
+    });
+
+
+    const requestedView =
+      document.querySelector(
+        `#view-${viewName}`
+      );
+
+
+    if (requestedView) {
+
+      requestedView.classList.add(
+        "active"
+      );
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+
+  navigationButtons.forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        openPortalView(
+          button.dataset.view
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     DASHBOARD QUICK LINKS
+  ======================================================= */
+
+  const quickViewButtons =
+    document.querySelectorAll(
+      "[data-open-view]"
+    );
+
+
+  quickViewButtons.forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        openPortalView(
+          button.dataset.openView
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     PET SWITCHING
+  ======================================================= */
+
+  const petButtons =
+    document.querySelectorAll(
+      ".pet-selector-card"
+    );
+
+
+  function selectPet(petId) {
+
+    const pet =
+      pets[petId];
+
+
+    if (!pet) {
+      return;
+    }
+
+
+    petButtons.forEach((button) => {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.pet === petId
+      );
+
+    });
+
+
+    const values = {
+
+      "selected-pet-avatar":
+        pet.initial,
+
+      "selected-pet-name":
+        pet.name,
+
+      "selected-pet-description":
+        pet.description,
+
+      "selected-pet-status":
+        pet.status,
+
+      "next-appointment-date":
+        pet.appointmentDate,
+
+      "next-appointment-type":
+        pet.appointmentType,
+
+      "vaccination-status":
+        pet.vaccinationStatus,
+
+      "vaccination-note":
+        pet.vaccinationNote,
+
+      "medication-count":
+        pet.medicationCount,
+
+      "medication-summary":
+        pet.medicationSummary,
+
+      "pet-weight":
+        pet.weight,
+
+      "last-exam":
+        pet.lastExam,
+
+      "rabies-status":
+        pet.rabies,
+
+      "microchip-status":
+        pet.microchip
+
+    };
+
+
+    Object.entries(values).forEach(
+      ([id, value]) => {
+
+        const element =
+          document.getElementById(id);
+
+        if (element) {
+          element.textContent = value;
+        }
+
+      }
+    );
+
+  }
+
+
+  petButtons.forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        selectPet(
+          button.dataset.pet
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     APPOINTMENT MODAL
+  ======================================================= */
+
+  const appointmentModal =
+    document.getElementById(
+      "appointment-modal"
+    );
+
+  const appointmentButtons = [
+    document.getElementById(
+      "request-appointment-button"
+    ),
+
+    document.getElementById(
+      "appointment-page-request"
+    )
+  ];
+
+
+  const modalClose =
+    document.getElementById(
+      "modal-close"
+    );
+
+
+  function openAppointmentModal() {
+
+    if (!appointmentModal) {
+      return;
+    }
+
+    appointmentModal.classList.add(
+      "open"
+    );
+
+    appointmentModal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+  }
+
+
+  function closeAppointmentModal() {
+
+    if (!appointmentModal) {
+      return;
+    }
+
+    appointmentModal.classList.remove(
+      "open"
+    );
+
+    appointmentModal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+  }
+
+
+  appointmentButtons.forEach(
+    (button) => {
+
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener(
+        "click",
+        openAppointmentModal
+      );
+
+    }
+  );
+
+
+  if (modalClose) {
+
+    modalClose.addEventListener(
+      "click",
+      closeAppointmentModal
+    );
+
+  }
+
+
+  if (appointmentModal) {
+
+    appointmentModal.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target ===
+          appointmentModal
+        ) {
+          closeAppointmentModal();
+        }
+
+      }
+    );
+
+  }
+
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (
+        event.key === "Escape"
+      ) {
+        closeAppointmentModal();
+      }
+
+    }
+  );
+
+
+  /* =======================================================
+     DEMO APPOINTMENT FORM
+  ======================================================= */
+
+  const appointmentForm =
+    document.getElementById(
+      "appointment-form"
+    );
+
+  const appointmentSuccess =
+    document.getElementById(
+      "appointment-success"
+    );
+
+
+  if (appointmentForm) {
+
+    appointmentForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+
+        if (appointmentSuccess) {
+
+          appointmentSuccess.textContent =
+            "Demo appointment request submitted successfully.";
+
+        }
+
+
+        appointmentForm.reset();
+
+      }
+    );
+
+  }
+
+});
