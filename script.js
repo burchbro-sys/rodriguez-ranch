@@ -1112,3 +1112,89 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+/* =========================================================
+   RODRIGUEZ RANCH STORY PAGE
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    if (
+      !document.body.classList.contains(
+        "story-page"
+      )
+    ) {
+      return;
+    }
+
+
+    /* =====================================================
+       STORY ROADMAP REVEAL
+    ===================================================== */
+
+    const storyTimelineItems =
+      document.querySelectorAll(
+        ".story-timeline article"
+      );
+
+
+    if (
+      "IntersectionObserver" in window
+    ) {
+
+      const storyObserver =
+        new IntersectionObserver(
+          (entries) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  storyObserver.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.2
+          }
+        );
+
+
+      storyTimelineItems.forEach(
+        (item) => {
+
+          storyObserver.observe(item);
+
+        }
+      );
+
+    } else {
+
+      storyTimelineItems.forEach(
+        (item) => {
+
+          item.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+  }
+);
