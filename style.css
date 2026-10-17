@@ -2105,3 +2105,831 @@ footer a:hover {
   }
 
 }
+/* =========================================================
+   EXPLORE THE RANCH PAGE
+========================================================= */
+
+
+/* HERO */
+
+#ranch-page-hero {
+  min-height: 82vh;
+
+  padding:
+    110px
+    7%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 27, 22, 0.92),
+      rgba(9, 27, 22, 0.55),
+      rgba(9, 27, 22, 0.08)
+    ),
+    url("images/ranch/ranch-overview.png");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.ranch-page-hero-content {
+  max-width: 900px;
+}
+
+#ranch-page-hero h1 {
+  margin-bottom: 25px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(4rem, 9vw, 8.5rem);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+#ranch-page-hero h1 span {
+  display: block;
+
+  color: var(--brass-light);
+
+  font-style: italic;
+}
+
+#ranch-page-hero p:not(.eyebrow) {
+  max-width: 680px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+}
+
+
+/* VISION */
+
+#vision {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 100px;
+}
+
+.ranch-vision-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.ranch-vision-copy p:not(.large-copy) {
+  max-width: 700px;
+
+  color:
+    var(--text-light);
+}
+
+
+/* PROPERTY OVERVIEW */
+
+#zones {
+  padding:
+    0;
+
+  background:
+    var(--forest-dark);
+
+  color: white;
+}
+
+.property-overview-image {
+  position: relative;
+
+  height: 720px;
+
+  overflow: hidden;
+}
+
+.property-overview-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.property-overlay-title {
+  position: absolute;
+
+  left: 6%;
+
+  bottom: 45px;
+
+  padding:
+    18px
+    24px;
+
+  background:
+    rgba(9, 27, 22, 0.87);
+
+  border-left:
+    3px solid var(--brass);
+
+  backdrop-filter:
+    blur(10px);
+}
+
+.property-overlay-title span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 0.65rem;
+}
+
+.property-overlay-title strong {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.6rem;
+}
+
+.property-zones {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.12);
+}
+
+.property-zones article {
+  min-height: 300px;
+
+  padding:
+    38px;
+
+  display: flex;
+
+  gap: 20px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.12);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.12);
+
+  transition:
+    background .25s ease;
+}
+
+.property-zones article:hover {
+  background:
+    var(--forest);
+}
+
+.zone-number {
+  color:
+    var(--brass-light);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.2rem;
+}
+
+.zone-label {
+  margin-bottom: 7px;
+
+  color:
+    var(--brass);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: .63rem;
+
+  font-weight: 800;
+}
+
+.property-zones h3 {
+  margin-bottom: 12px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+}
+
+.property-zones article p:last-child {
+  color:
+    rgba(255,255,255,.58);
+
+  font-size: .84rem;
+}
+
+
+/* LIFE ON THE RANCH */
+
+.ranch-life-section {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream);
+}
+
+.ranch-life-heading {
+  max-width: 900px;
+
+  margin-bottom: 60px;
+}
+
+.ranch-life-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.ranch-life-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.25fr
+    .75fr;
+
+  grid-template-rows:
+    350px
+    350px;
+
+  gap: 18px;
+}
+
+.ranch-life-grid figure {
+  position: relative;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+.ranch-life-large {
+  grid-row:
+    1 / 3;
+}
+
+.ranch-life-grid img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .5s ease;
+}
+
+.ranch-life-grid figure:hover img {
+  transform:
+    scale(1.035);
+}
+
+.ranch-life-grid figcaption {
+  position: absolute;
+
+  left: 22px;
+
+  bottom: 22px;
+
+  max-width: 320px;
+
+  padding:
+    15px
+    18px;
+
+  background:
+    rgba(9, 27, 22, .84);
+
+  color:
+    rgba(255,255,255,.75);
+
+  backdrop-filter:
+    blur(8px);
+
+  font-size: .78rem;
+}
+
+.ranch-life-grid figcaption span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.05rem;
+}
+
+
+/* GROWING */
+
+#growing {
+  min-height: 750px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    .8fr;
+
+  background:
+    var(--forest);
+}
+
+.growing-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.growing-content {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  color: white;
+}
+
+.growing-content h2 {
+  color: white;
+}
+
+.growing-content .large-copy {
+  color:
+    var(--brass-light);
+}
+
+.growing-content > p:not(.eyebrow):not(.large-copy) {
+  color:
+    rgba(255,255,255,.64);
+}
+
+.growing-list {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.growing-list span {
+  padding:
+    8px
+    11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.22);
+
+  font-size: .67rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* RANCH TO TABLE */
+
+#ranch-table {
+  position: relative;
+
+  min-height: 620px;
+
+  overflow: hidden;
+}
+
+.ranch-table-background {
+  position: absolute;
+
+  inset: 0;
+}
+
+.ranch-table-background img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+#ranch-table::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9,27,22,.93),
+      rgba(9,27,22,.60),
+      rgba(9,27,22,.05)
+    );
+}
+
+.ranch-table-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 720px;
+
+  padding:
+    130px
+    7%;
+
+  color: white;
+}
+
+.ranch-table-content h2 {
+  color: white;
+}
+
+.ranch-table-content p:last-child {
+  color:
+    rgba(255,255,255,.69);
+}
+
+
+/* VETERINARY PREVIEW */
+
+#ranch-vet-preview {
+  padding:
+    120px
+    7%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    .9fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.ranch-vet-image img {
+  height: 620px;
+
+  object-fit: cover;
+
+  box-shadow:
+    var(--shadow-deep);
+}
+
+.ranch-vet-copy h2 {
+  color:
+    var(--forest-dark);
+}
+
+.ranch-vet-copy p:not(.eyebrow):not(.large-copy) {
+  color:
+    var(--text-light);
+}
+
+.ranch-text-link {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding-bottom: 4px;
+
+  color:
+    var(--forest);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--brass);
+}
+
+
+/* MARKET */
+
+#ranch-market-preview {
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  min-height: 700px;
+
+  background:
+    var(--charcoal);
+
+  color: white;
+}
+
+.market-content {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.market-content h2 {
+  color: white;
+}
+
+.market-content > p:not(.eyebrow) {
+  color:
+    rgba(255,255,255,.65);
+}
+
+.market-products {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.market-products span {
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.12);
+
+  color:
+    rgba(255,255,255,.78);
+
+  font-size: .82rem;
+}
+
+.market-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* PHASES */
+
+.ranch-future {
+  padding:
+    120px
+    7%;
+}
+
+.ranch-phases {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.15);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.ranch-phases article {
+  padding:
+    35px
+    24px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.15);
+}
+
+.ranch-phases article:last-child {
+  border-right: none;
+}
+
+.ranch-phases span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.3rem;
+}
+
+.ranch-phases p {
+  margin:
+    18px
+    0
+    6px;
+
+  color:
+    rgba(255,255,255,.45);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  font-size: .62rem;
+}
+
+.ranch-phases h3 {
+  color: white;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.25rem;
+}
+
+
+/* FINAL */
+
+#ranch-final {
+  padding:
+    110px
+    7%;
+
+  text-align: center;
+
+  background:
+    var(--brass);
+}
+
+#ranch-final h2 {
+  max-width: 900px;
+
+  margin:
+    0
+    auto
+    35px;
+
+  color:
+    var(--forest-deep);
+}
+
+#ranch-final h2 span {
+  color:
+    var(--forest);
+}
+
+#ranch-final .eyebrow {
+  color:
+    rgba(9,27,22,.65);
+}
+
+.ranch-dark-button {
+  background:
+    var(--forest-deep);
+
+  color: white;
+}
+
+
+/* RANCH PAGE RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  #vision,
+  #ranch-vet-preview,
+  #ranch-market-preview,
+  #growing {
+    grid-template-columns: 1fr;
+  }
+
+  .property-zones {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .growing-image {
+    min-height: 600px;
+  }
+
+  .market-image {
+    min-height: 600px;
+  }
+
+  .ranch-phases {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #ranch-page-hero {
+    min-height: 720px;
+
+    padding:
+      90px
+      7%
+      50px;
+  }
+
+  #ranch-page-hero h1 {
+    letter-spacing: -3px;
+  }
+
+  #vision {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding:
+      85px
+      7%;
+  }
+
+  .property-overview-image {
+    height: 480px;
+  }
+
+  .property-zones {
+    grid-template-columns: 1fr;
+  }
+
+  .ranch-life-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+  }
+
+  .ranch-life-grid figure,
+  .ranch-life-large {
+    grid-row: auto;
+
+    min-height: 380px;
+  }
+
+  .ranch-vet-image img {
+    height: 450px;
+  }
+
+  .ranch-phases {
+    grid-template-columns: 1fr;
+  }
+
+  .ranch-phases article {
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,.15);
+  }
+
+}
