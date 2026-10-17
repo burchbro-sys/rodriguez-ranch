@@ -59,7 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       const header =
-        document.querySelector("header");
+  document.body.classList.contains("portal-page")
+    ? null
+    : document.querySelector("header");
 
       const headerHeight =
         header ?
@@ -1422,6 +1424,70 @@ document.addEventListener(
 
           }
         );
+
+      }
+    );
+
+  }
+);
+/* =========================================================
+   GLOBAL PAGE NAVIGATION
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    if (
+      document.body.classList.contains(
+        "portal-page"
+      )
+    ) {
+      return;
+    }
+
+
+    const pageLinks =
+      document.querySelectorAll(
+        "header nav a"
+      );
+
+
+    let currentPage =
+      window.location.pathname
+        .split("/")
+        .pop();
+
+
+    if (
+      !currentPage
+    ) {
+      currentPage =
+        "index.html";
+    }
+
+
+    pageLinks.forEach(
+      (link) => {
+
+        const linkPage =
+          link.getAttribute("href");
+
+
+        if (
+          linkPage === currentPage
+        ) {
+
+          link.classList.add(
+            "current-page"
+          );
+
+          link.setAttribute(
+            "aria-current",
+            "page"
+          );
+
+        }
 
       }
     );
