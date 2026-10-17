@@ -1198,3 +1198,233 @@ document.addEventListener(
 
   }
 );
+/* =========================================================
+   RODRIGUEZ RANCH CONTACT PAGE
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    if (
+      !document.body.classList.contains(
+        "contact-page"
+      )
+    ) {
+      return;
+    }
+
+
+    /* =====================================================
+       INQUIRY CARDS
+    ===================================================== */
+
+    const inquiryCards =
+      document.querySelectorAll(
+        ".contact-option-card"
+      );
+
+    const inquirySelect =
+      document.getElementById(
+        "contact-inquiry"
+      );
+
+    const contactFormSection =
+      document.getElementById(
+        "contact-form-section"
+      );
+
+
+    inquiryCards.forEach(
+      (card) => {
+
+        card.addEventListener(
+          "click",
+          () => {
+
+            inquiryCards.forEach(
+              (otherCard) => {
+
+                otherCard.classList.remove(
+                  "selected"
+                );
+
+              }
+            );
+
+
+            card.classList.add(
+              "selected"
+            );
+
+
+            const inquiry =
+              card.dataset.inquiry;
+
+
+            if (
+              inquirySelect &&
+              inquiry
+            ) {
+
+              inquirySelect.value =
+                inquiry;
+
+            }
+
+
+            if (
+              contactFormSection
+            ) {
+
+              contactFormSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       DEMO CONTACT FORM
+    ===================================================== */
+
+    const contactForm =
+      document.getElementById(
+        "contact-form"
+      );
+
+    const contactStatus =
+      document.getElementById(
+        "contact-form-status"
+      );
+
+
+    if (
+      contactForm
+    ) {
+
+      contactForm.addEventListener(
+        "submit",
+        (event) => {
+
+          event.preventDefault();
+
+
+          const nameInput =
+            document.getElementById(
+              "contact-name"
+            );
+
+
+          const firstName =
+            nameInput &&
+            nameInput.value.trim()
+              ?
+              nameInput.value
+                .trim()
+                .split(" ")[0]
+              :
+              "there";
+
+
+          if (
+            contactStatus
+          ) {
+
+            contactStatus.textContent =
+              `Thanks, ${firstName}. Your demo message has been submitted.`;
+
+          }
+
+
+          contactForm.reset();
+
+
+          inquiryCards.forEach(
+            (card) => {
+
+              card.classList.remove(
+                "selected"
+              );
+
+            }
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
+
+    const faqItems =
+      document.querySelectorAll(
+        ".faq-item"
+      );
+
+
+    faqItems.forEach(
+      (item) => {
+
+        const question =
+          item.querySelector(
+            ".faq-question"
+          );
+
+
+        if (
+          !question
+        ) {
+          return;
+        }
+
+
+        question.addEventListener(
+          "click",
+          () => {
+
+            const isOpen =
+              item.classList.contains(
+                "open"
+              );
+
+
+            faqItems.forEach(
+              (otherItem) => {
+
+                otherItem.classList.remove(
+                  "open"
+                );
+
+              }
+            );
+
+
+            if (
+              !isOpen
+            ) {
+
+              item.classList.add(
+                "open"
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+  }
+);
