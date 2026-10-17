@@ -6830,3 +6830,955 @@ p:not(.eyebrow) {
   }
 
 }
+/* =========================================================
+   RODRIGUEZ RANCH ANIMALS PAGE
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+#animals-page-hero {
+  min-height: 88vh;
+
+  padding:
+    110px
+    7%
+    65px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9,27,22,.94) 0%,
+      rgba(9,27,22,.72) 38%,
+      rgba(9,27,22,.22) 75%,
+      rgba(9,27,22,.04) 100%
+    ),
+    url("images/animals/mixed-pasture.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.animals-hero-content {
+  max-width: 850px;
+}
+
+#animals-page-hero h1 {
+  margin-bottom: 25px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(4.2rem, 9vw, 9rem);
+
+  font-weight: 500;
+
+  line-height: .88;
+
+  letter-spacing: -5px;
+}
+
+#animals-page-hero h1 span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  font-style: italic;
+}
+
+#animals-page-hero
+p:not(.eyebrow) {
+  max-width: 650px;
+
+  color:
+    rgba(255,255,255,.78);
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+#animal-philosophy {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 100px;
+
+  background:
+    var(--cream-light);
+}
+
+#animal-philosophy h2 {
+  color:
+    var(--forest-dark);
+}
+
+#animal-philosophy
+> div:last-child
+p:not(.large-copy) {
+  max-width: 700px;
+
+  color:
+    var(--text-light);
+}
+
+
+/* =========================================================
+   PASTURE FEATURE
+========================================================= */
+
+#pasture-feature {
+  position: relative;
+
+  min-height: 760px;
+
+  overflow: hidden;
+}
+
+#pasture-feature > img {
+  position: absolute;
+
+  inset: 0;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+#pasture-feature::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(9,27,22,.9),
+      rgba(9,27,22,.06) 65%
+    );
+}
+
+.pasture-feature-content {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 7%;
+
+  bottom: 65px;
+
+  max-width: 850px;
+
+  color: white;
+}
+
+.pasture-feature-content h2 {
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+.pasture-feature-content
+p:last-child {
+  max-width: 650px;
+
+  color:
+    rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   ANIMAL STORY SECTIONS
+========================================================= */
+
+.animal-story-section {
+  min-height: 780px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    .85fr;
+
+  background:
+    var(--cream-light);
+}
+
+.animal-story-reverse {
+  grid-template-columns:
+    .85fr
+    1.15fr;
+
+  background:
+    var(--cream);
+}
+
+.animal-story-image {
+  min-height: 780px;
+
+  overflow: hidden;
+}
+
+.animal-story-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .6s ease;
+}
+
+.animal-story-section:hover
+.animal-story-image img {
+  transform:
+    scale(1.025);
+}
+
+.animal-story-content {
+  position: relative;
+
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.animal-number {
+  position: absolute;
+
+  right: 8%;
+
+  top: 35px;
+
+  margin: 0;
+
+  color:
+    rgba(25,58,48,.08);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 8rem;
+
+  line-height: 1;
+}
+
+.animal-story-content h2 {
+  color:
+    var(--forest-dark);
+}
+
+.animal-story-content
+> p:not(.animal-number):not(.eyebrow):not(.large-copy) {
+  color:
+    var(--text-light);
+}
+
+.animal-needs {
+  margin-top: 25px;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+.animal-needs div {
+  padding:
+    13px
+    0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.animal-needs span {
+  color:
+    var(--brass);
+
+  font-size: .67rem;
+
+  font-weight: 800;
+}
+
+.animal-needs p {
+  margin: 0;
+
+  color:
+    var(--forest);
+
+  font-weight: 700;
+}
+
+.animal-text-link {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding-bottom: 4px;
+
+  color:
+    var(--forest);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--brass);
+}
+
+
+/* =========================================================
+   FUTURE ANIMALS
+========================================================= */
+
+#future-animals {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--forest-deep);
+
+  color: white;
+}
+
+.future-animals-heading {
+  max-width: 850px;
+
+  margin-bottom: 60px;
+}
+
+.future-animals-heading h2 {
+  color: white;
+}
+
+.future-animals-heading
+> p:last-child {
+  max-width: 650px;
+
+  color:
+    rgba(255,255,255,.58);
+}
+
+.future-animal-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 1px;
+
+  background:
+    rgba(255,255,255,.12);
+}
+
+.future-animal-grid article {
+  min-height: 330px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    var(--forest-dark);
+}
+
+.future-animal-number {
+  margin-bottom: auto;
+
+  color:
+    rgba(255,255,255,.11);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 4rem;
+}
+
+.future-animal-grid h3 {
+  margin-bottom: 13px;
+
+  color: white;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.7rem;
+}
+
+.future-animal-grid
+article > p:not(.future-animal-number) {
+  color:
+    rgba(255,255,255,.57);
+
+  font-size: .85rem;
+}
+
+.future-animal-grid span {
+  margin-top: 15px;
+
+  color:
+    var(--brass-light);
+
+  font-size: .63rem;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   ANIMAL CARE
+========================================================= */
+
+#care {
+  padding:
+    130px
+    7%;
+
+  background:
+    var(--cream);
+}
+
+.animal-care-heading {
+  max-width: 900px;
+
+  margin-bottom: 65px;
+}
+
+.animal-care-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.animal-care-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 1px;
+
+  background:
+    var(--border);
+}
+
+.animal-care-grid article {
+  min-height: 300px;
+
+  padding: 35px;
+
+  background:
+    var(--cream-light);
+}
+
+.animal-care-grid span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.8rem;
+}
+
+.animal-care-grid h3 {
+  margin:
+    25px
+    0
+    10px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.45rem;
+}
+
+.animal-care-grid p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: .84rem;
+}
+
+
+/* =========================================================
+   VETERINARY CONNECTION
+========================================================= */
+
+#animal-vet-connection {
+  min-height: 760px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    .85fr;
+
+  background:
+    var(--forest);
+
+  color: white;
+}
+
+.animal-vet-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.animal-vet-content {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.animal-vet-content h2 {
+  color: white;
+}
+
+.animal-vet-content
+.large-copy {
+  color:
+    var(--brass-light);
+}
+
+.animal-vet-content
+> p:not(.eyebrow):not(.large-copy) {
+  color:
+    rgba(255,255,255,.62);
+}
+
+.animal-vet-content .button {
+  width: fit-content;
+
+  margin-top: 15px;
+}
+
+
+/* =========================================================
+   RESCUE
+========================================================= */
+
+#animal-rescue {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 100px;
+
+  align-items: center;
+
+  background:
+    var(--charcoal);
+
+  color: white;
+}
+
+.animal-rescue-content h2 {
+  color: white;
+}
+
+.animal-rescue-content
+> p:not(.eyebrow) {
+  color:
+    rgba(255,255,255,.62);
+}
+
+.rescue-link {
+  color:
+    var(--brass-light);
+}
+
+.animal-rescue-quote {
+  position: relative;
+
+  padding:
+    55px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.13);
+}
+
+.animal-rescue-quote span {
+  position: absolute;
+
+  top: -25px;
+
+  left: 25px;
+
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 7rem;
+
+  line-height: 1;
+}
+
+.animal-rescue-quote p {
+  margin: 0;
+
+  color:
+    var(--cream);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(1.8rem,3vw,3rem);
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   MEET THE RANCH
+========================================================= */
+
+#meet-ranch {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream-light);
+}
+
+.meet-ranch-heading {
+  max-width: 820px;
+
+  margin-bottom: 60px;
+}
+
+.meet-ranch-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.meet-ranch-heading
+> p:last-child {
+  color:
+    var(--text-light);
+}
+
+.animal-profile-preview {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 20px;
+}
+
+.animal-profile-preview article {
+  padding-bottom: 25px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 35px
+    rgba(9,27,22,.08);
+}
+
+.profile-photo {
+  height: 330px;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+}
+
+.profile-photo img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .45s ease;
+}
+
+.animal-profile-preview
+article:hover
+.profile-photo img {
+  transform:
+    scale(1.035);
+}
+
+.animal-profile-preview
+article > p,
+.animal-profile-preview
+article > h3 {
+  margin-left: 25px;
+
+  margin-right: 25px;
+}
+
+.animal-profile-preview h3 {
+  margin-bottom: 7px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.45rem;
+}
+
+.animal-profile-preview
+article > p:last-child {
+  color:
+    var(--text-light);
+
+  font-size: .76rem;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+#animals-final {
+  padding:
+    110px
+    7%;
+
+  text-align: center;
+
+  background:
+    var(--brass);
+}
+
+#animals-final .eyebrow {
+  color:
+    rgba(9,27,22,.62);
+}
+
+#animals-final h2 {
+  max-width: 950px;
+
+  margin:
+    0
+    auto
+    35px;
+
+  color:
+    var(--forest-deep);
+}
+
+#animals-final h2 span {
+  color:
+    var(--forest);
+}
+
+.animals-final-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+.animals-final-link {
+  color:
+    var(--forest-deep);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--forest-deep);
+}
+
+
+/* =========================================================
+   ANIMALS PAGE RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  #animal-philosophy,
+  #animal-rescue,
+  #animal-vet-connection {
+    grid-template-columns: 1fr;
+  }
+
+  .animal-story-section,
+  .animal-story-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .animal-story-reverse
+  .animal-story-content {
+    order: 2;
+  }
+
+  .animal-story-reverse
+  .animal-story-image {
+    order: 1;
+  }
+
+  .animal-story-image,
+  .animal-vet-image {
+    min-height: 580px;
+  }
+
+  .future-animal-grid,
+  .animal-care-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  #animals-page-hero {
+    min-height: 750px;
+
+    padding:
+      90px
+      7%
+      50px;
+
+    background-position:
+      58% center;
+  }
+
+  #animals-page-hero h1 {
+    letter-spacing: -3px;
+  }
+
+  #animal-philosophy {
+    gap: 30px;
+
+    padding:
+      85px
+      7%;
+  }
+
+  #pasture-feature {
+    min-height: 570px;
+  }
+
+  .animal-story-image,
+  .animal-vet-image {
+    min-height: 430px;
+  }
+
+  .animal-story-content,
+  .animal-vet-content {
+    padding:
+      80px
+      7%;
+  }
+
+  .animal-number {
+    font-size: 5rem;
+  }
+
+  #future-animals,
+  #care,
+  #animal-rescue,
+  #meet-ranch {
+    padding:
+      85px
+      7%;
+  }
+
+  .future-animal-grid,
+  .animal-care-grid,
+  .animal-profile-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .animal-rescue-quote {
+    padding:
+      45px
+      30px;
+  }
+
+  .profile-photo {
+    height: 380px;
+  }
+
+}
