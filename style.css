@@ -2933,3 +2933,1224 @@ footer a:hover {
   }
 
 }
+/* =========================================================
+   RR VETERINARY CENTER PAGE
+========================================================= */
+
+
+/* =========================================================
+   VETERINARY HERO
+========================================================= */
+
+#vet-page-hero {
+  position: relative;
+
+  min-height: 86vh;
+
+  padding:
+    115px
+    7%
+    60px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  color: white;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 25, 21, 0.95) 0%,
+      rgba(12, 43, 35, 0.77) 43%,
+      rgba(12, 43, 35, 0.23) 76%,
+      rgba(12, 43, 35, 0.05) 100%
+    ),
+    url("images/veterinary/vet-center.png");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+#vet-page-hero::after {
+  content: "VET";
+
+  position: absolute;
+
+  right: 2%;
+
+  bottom: -90px;
+
+  color:
+    rgba(255, 255, 255, 0.045);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      12rem,
+      28vw,
+      29rem
+    );
+
+  font-weight: 700;
+
+  letter-spacing: -25px;
+
+  pointer-events: none;
+}
+
+.vet-page-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+}
+
+#vet-page-hero h1 {
+  margin-bottom: 24px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      4rem,
+      8vw,
+      8.3rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+#vet-page-hero h1 span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  font-style: italic;
+}
+
+.vet-hero-lead {
+  max-width: 680px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  font-size: 1.12rem;
+}
+
+.vet-hero-badge {
+  position: absolute;
+
+  right: 6%;
+
+  bottom: 55px;
+
+  z-index: 2;
+
+  padding:
+    18px
+    22px;
+
+  background:
+    rgba(9, 27, 22, 0.82);
+
+  border-left:
+    3px solid
+    var(--brass);
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.vet-hero-badge span {
+  display: block;
+
+  color:
+    var(--brass-light);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.8px;
+
+  font-size: 0.62rem;
+}
+
+.vet-hero-badge strong {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#vet-intro {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 100px;
+
+  background:
+    var(--cream-light);
+}
+
+.vet-intro-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.vet-intro-copy p:not(.large-copy) {
+  max-width: 700px;
+
+  color:
+    var(--text-light);
+}
+
+
+/* =========================================================
+   CLINIC FEATURE
+========================================================= */
+
+#vet-clinic-feature {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    0.85fr;
+
+  min-height: 820px;
+
+  background:
+    var(--forest-dark);
+
+  color: white;
+}
+
+.vet-clinic-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.vet-clinic-statement {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.vet-clinic-statement h2 {
+  color: white;
+}
+
+.vet-clinic-statement > p:not(.eyebrow) {
+  color:
+    rgba(255, 255, 255, 0.63);
+}
+
+.clinic-principles {
+  margin-top: 35px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.clinic-principles article {
+  padding:
+    20px
+    0;
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    1fr;
+
+  column-gap: 15px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.clinic-principles span {
+  grid-row:
+    1 / 3;
+
+  color:
+    var(--brass-light);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.3rem;
+}
+
+.clinic-principles h3 {
+  margin-bottom: 5px;
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+.clinic-principles p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.vet-services {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream);
+}
+
+.vet-service-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  background:
+    var(--border);
+}
+
+.vet-service-grid article {
+  min-height: 360px;
+
+  padding: 34px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    var(--cream-light);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.vet-service-grid article:hover {
+  position: relative;
+
+  z-index: 2;
+
+  background: white;
+
+  transform:
+    translateY(-5px);
+}
+
+.service-number {
+  margin-bottom: auto;
+
+  color:
+    rgba(25, 58, 48, 0.14);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 3.6rem;
+}
+
+.service-type {
+  margin-bottom: 7px;
+
+  color:
+    var(--brass);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 0.64rem;
+
+  font-weight: 800;
+}
+
+.vet-service-grid h3 {
+  margin-bottom: 14px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.55rem;
+}
+
+.vet-service-grid article > p:last-child {
+  margin-bottom: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   CLINIC EXPERIENCE
+========================================================= */
+
+#clinic-experience {
+  padding:
+    120px
+    7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.15fr;
+
+  gap: 90px;
+
+  align-items: center;
+
+  background:
+    var(--cream-light);
+}
+
+.clinic-experience-copy h2 {
+  color:
+    var(--forest-dark);
+}
+
+.clinic-experience-copy p:not(.eyebrow):not(.large-copy) {
+  color:
+    var(--text-light);
+}
+
+.clinic-experience-image {
+  position: relative;
+}
+
+.clinic-experience-image img {
+  min-height: 620px;
+
+  object-fit: cover;
+
+  box-shadow:
+    var(--shadow-deep);
+}
+
+.clinic-image-caption {
+  position: absolute;
+
+  left: -18px;
+
+  bottom: 25px;
+
+  padding:
+    11px
+    18px;
+
+  background:
+    var(--brass);
+
+  color: white;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SURGERY
+========================================================= */
+
+#surgery {
+  padding:
+    130px
+    8%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 100px;
+
+  background:
+    var(--charcoal);
+
+  color: white;
+}
+
+.surgery-title h2 {
+  color: white;
+}
+
+.surgery-copy .large-copy {
+  color:
+    var(--brass-light);
+}
+
+.surgery-copy > p:not(.large-copy) {
+  color:
+    rgba(255, 255, 255, 0.62);
+}
+
+.surgery-features {
+  margin-top: 35px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.surgery-features div {
+  padding:
+    15px
+    0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.surgery-features span {
+  color:
+    var(--brass);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+}
+
+.surgery-features p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LARGE ANIMAL
+========================================================= */
+
+#large-animal {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    0.85fr;
+
+  min-height: 760px;
+
+  background:
+    var(--forest);
+}
+
+.large-animal-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.large-animal-content {
+  padding:
+    100px
+    9%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  color: white;
+}
+
+.large-animal-content h2 {
+  color: white;
+}
+
+.large-animal-content > p:not(.eyebrow):not(.future-note) {
+  color:
+    rgba(255, 255, 255, 0.65);
+}
+
+.large-animal-list {
+  margin:
+    30px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.large-animal-list article {
+  padding:
+    15px
+    0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.large-animal-list span {
+  color:
+    var(--brass-light);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  font-size: 0.65rem;
+}
+
+.large-animal-list strong {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1rem;
+}
+
+.future-note {
+  color:
+    rgba(255, 255, 255, 0.44);
+
+  font-size: 0.72rem;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CLIENT EXPERIENCE
+========================================================= */
+
+#client-experience {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream-light);
+}
+
+.client-experience-heading {
+  max-width: 900px;
+
+  margin-bottom: 60px;
+}
+
+.client-experience-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.client-experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    var(--border);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.client-experience-grid article {
+  padding:
+    40px
+    28px;
+
+  border-right:
+    1px solid
+    var(--border);
+}
+
+.client-experience-grid article:last-child {
+  border-right: none;
+}
+
+.client-experience-grid span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.5rem;
+}
+
+.client-experience-grid h3 {
+  margin:
+    18px
+    0
+    10px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+.client-experience-grid p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: 0.84rem;
+}
+
+
+/* =========================================================
+   PORTAL
+========================================================= */
+
+#portal {
+  padding:
+    130px
+    7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 90px;
+
+  align-items: center;
+
+  background:
+    var(--forest-deep);
+
+  color: white;
+}
+
+.portal-copy h2 {
+  color: white;
+}
+
+.portal-copy > p:not(.eyebrow) {
+  color:
+    rgba(255, 255, 255, 0.62);
+}
+
+.vet-portal-button {
+  margin-top: 15px;
+
+  background:
+    var(--brass);
+
+  color: white;
+}
+
+.vet-portal-demo {
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      white,
+      #f0eee8
+    );
+
+  color:
+    var(--text);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 40px 100px
+    rgba(0, 0, 0, 0.36);
+}
+
+.vet-demo-top {
+  padding-bottom: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+.vet-demo-top span {
+  color:
+    var(--brass);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.3px;
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+}
+
+.vet-demo-top h3 {
+  margin:
+    5px
+    0
+    0;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.8rem;
+}
+
+.vet-demo-pet {
+  margin:
+    25px
+    0;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  background:
+    var(--cream-light);
+}
+
+.vet-demo-pet small {
+  color:
+    var(--brass);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.vet-demo-pet h4 {
+  margin:
+    2px
+    0;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.4rem;
+}
+
+.vet-demo-pet p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: 0.78rem;
+}
+
+.vet-demo-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.vet-demo-cards article {
+  padding: 18px;
+
+  border:
+    1px solid
+    var(--border);
+}
+
+.vet-demo-cards span {
+  color:
+    var(--text-light);
+
+  font-size: 0.7rem;
+}
+
+.vet-demo-cards strong {
+  display: block;
+
+  margin:
+    10px
+    0;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.4rem;
+}
+
+.vet-demo-cards p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: 0.68rem;
+}
+
+.vet-demo-action {
+  margin-top: 20px;
+
+  padding: 13px;
+
+  background:
+    var(--forest);
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VETERINARY VALUES
+========================================================= */
+
+#vet-values {
+  padding:
+    120px
+    7%;
+
+  background:
+    var(--cream);
+}
+
+.vet-values-heading {
+  max-width: 850px;
+
+  margin-bottom: 55px;
+}
+
+.vet-values-heading h2 {
+  color:
+    var(--forest-dark);
+}
+
+.vet-value-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1px;
+
+  background:
+    var(--border);
+}
+
+.vet-value-list article {
+  padding: 35px;
+
+  background:
+    var(--cream-light);
+}
+
+.vet-value-list span {
+  color:
+    var(--brass);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 2.6rem;
+}
+
+.vet-value-list h3 {
+  margin:
+    18px
+    0
+    9px;
+
+  color:
+    var(--forest);
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+.vet-value-list p {
+  margin: 0;
+
+  color:
+    var(--text-light);
+
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+#vet-final {
+  padding:
+    110px
+    7%;
+
+  text-align: center;
+
+  background:
+    var(--brass);
+}
+
+#vet-final .eyebrow {
+  color:
+    rgba(9, 27, 22, 0.65);
+}
+
+#vet-final h2 {
+  max-width: 950px;
+
+  margin:
+    0
+    auto
+    35px;
+
+  color:
+    var(--forest-deep);
+}
+
+#vet-final h2 span {
+  color:
+    var(--forest);
+}
+
+.vet-final-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+.vet-return-link {
+  color:
+    var(--forest-deep);
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid
+    var(--forest-deep);
+}
+
+
+/* =========================================================
+   VETERINARY RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  #vet-intro,
+  #vet-clinic-feature,
+  #clinic-experience,
+  #surgery,
+  #large-animal,
+  #portal {
+    grid-template-columns: 1fr;
+  }
+
+  .vet-clinic-image,
+  .large-animal-image {
+    min-height: 600px;
+  }
+
+  .vet-service-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .client-experience-grid,
+  .vet-value-list {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .client-experience-grid article:nth-child(2) {
+    border-right: none;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #vet-page-hero {
+    min-height: 720px;
+
+    padding:
+      90px
+      7%
+      50px;
+  }
+
+  #vet-page-hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .vet-hero-badge {
+    display: none;
+  }
+
+  #vet-intro {
+    gap: 30px;
+
+    padding:
+      85px
+      7%;
+  }
+
+  .vet-clinic-image,
+  .large-animal-image {
+    min-height: 450px;
+  }
+
+  .vet-clinic-statement,
+  .large-animal-content {
+    padding:
+      80px
+      7%;
+  }
+
+  .vet-services,
+  #clinic-experience,
+  #surgery,
+  #client-experience,
+  #portal,
+  #vet-values {
+    padding:
+      85px
+      7%;
+  }
+
+  .vet-service-grid,
+  .client-experience-grid,
+  .vet-value-list,
+  .vet-demo-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .client-experience-grid article {
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      var(--border);
+  }
+
+  .clinic-experience-image img {
+    min-height: 420px;
+  }
+
+}
