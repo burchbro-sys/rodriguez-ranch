@@ -9808,3 +9808,15 @@ p:not(.large-copy) {
   }
 
 }
+/* =========================================================
+   CURRENT PAGE NAVIGATION
+========================================================= */
+
+header nav a.current-page {
+  color:
+    var(--brass);
+}
+
+header nav a.current-page::after {
+  width: 100%;
+}
